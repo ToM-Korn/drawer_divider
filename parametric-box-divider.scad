@@ -32,9 +32,9 @@
  */
 
 // The width of your drawer
-drawer_width_int = 200;
+drawer_width_int = 300;
 // The depth of your drawer
-drawer_depth_int = 200;
+drawer_depth_int = 150;
 // The hight of the diveders
 divider_hight_int = 50;
 
@@ -48,13 +48,13 @@ fixed_number_b = 1; // [0:FixedSize, 1:FixedNumber]
 all_parts_b = 1; // [0:JustMajorParts, 1:AllParts]
 
 // Choose how many horizontal boxes you want to have
-boxes_horizontal_int = 4;
+boxes_horizontal_int = 2;
 // Choose how many vertical boxes you want to have
 boxes_vertical_int = 4;
-// Choose the fixed lenght of a box (only works with fixed_number set to zero)
-boxes_width_int = 0;
+// Choose the fixed width of a box (only works with fixed_number set to zero)
+boxes_width_int = 10;
 // Choose the fixed depth of a box (only works with fixed_number set to zero)
-boxes_depth_int = 0;
+boxes_depth_int = 10;
 
 // Choose distance between parts
 distance_int = 5;
@@ -64,8 +64,8 @@ module comb_hor(parts_int) {
 	difference(){
 		translate(v=[0,(-divider_hight_int/2-distance_int/2)-(multiplyer_int*(divider_hight_int+distance_int)),0]) square(size=[drawer_width_int,divider_hight_int],center=true);
 		if (fixed_number_b){
-			for (x=[1:boxes_horizontal_int-1]){
-				translate(v=[-(drawer_width_int/2)+(drawer_width_int/boxes_horizontal_int)*x,(-divider_hight_int/2-distance_int/2)+(divider_hight_int/4)-(multiplyer_int*(divider_hight_int+distance_int)),0]) square(size=[material_thickness_int,divider_hight_int/2+2],center=true);
+			for (x=[1:boxes_vertical_int-1]){
+				translate(v=[-(drawer_width_int/2)+(drawer_width_int/boxes_vertical_int)*x,(-divider_hight_int/2-distance_int/2)+(divider_hight_int/4)-(multiplyer_int*(divider_hight_int+distance_int)),0]) square(size=[material_thickness_int,divider_hight_int/2+2],center=true);
 			
 			}
 		}
@@ -83,8 +83,8 @@ module comb_ver(parts_int) {
 		difference(){
 			translate(v=[0,(divider_hight_int/2+distance_int/2)+(multiplyer_int*(divider_hight_int+distance_int)),0]) square(size=[drawer_depth_int,divider_hight_int],center=true);
 		if (fixed_number_b){
-			for (x=[1:boxes_vertical_int-1]){
-				translate(v=[-(drawer_depth_int/2)+(drawer_depth_int/boxes_vertical_int)*x,((divider_hight_int/2+distance_int/2)-(divider_hight_int/4))+(multiplyer_int*(divider_hight_int+distance_int)),0]) square(size=[material_thickness_int,divider_hight_int/2+2],center=true);
+			for (x=[1:boxes_horizontal_int-1]){
+				translate(v=[-(drawer_depth_int/2)+(drawer_depth_int/boxes_horizontal_int)*x,((divider_hight_int/2+distance_int/2)-(divider_hight_int/4))+(multiplyer_int*(divider_hight_int+distance_int)),0]) square(size=[material_thickness_int,divider_hight_int/2+2],center=true);
 			
 			}
 		} else {
@@ -102,8 +102,8 @@ if (all_parts_b) {
 		comb_hor(boxes_horizontal_int-2);
 		comb_ver(boxes_vertical_int-2);
 	} else {
-		comb_hor(round(drawer_width_int/boxes_width_int)-2);
-		comb_ver(round(drawer_depth_int/boxes_depth_int)-2);
+		comb_hor(round(drawer_depth_int/boxes_depth_int)-2);
+		comb_ver(round(drawer_width_int/boxes_width_int)-2);
 	}
 	
 } else {
