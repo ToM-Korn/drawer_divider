@@ -17,6 +17,7 @@
  * GNU General Public License for more details.
  * 
  * The latest version can be found here:
+ * http://www.thingiverse.com/thing:70338
  * https://github.com/ToM-Korn/drawer_divider
  * 
  * contibutions welcome! please send me pull requests!
@@ -31,6 +32,8 @@
  * inaccuracy in cutting different materials
  */
 
+/* [Drawer/Box Size and Divider] */
+
 // The width of your drawer
 drawer_width_int = 300;
 // The depth of your drawer
@@ -41,11 +44,10 @@ divider_hight_int = 50;
 // The thickness of the material you are cutting the dividers out
 material_thickness_int = 4;
 
+/* [Separation Settings] */
+
 // Choose if you want to have fixed number of boxes with all the same size or a fixed value for a box that will be repeaded as often as possible
 fixed_number_b = 1; // [0:FixedSize, 1:FixedNumber]
-
-// Choose if you want just the two major (horizontal and vertical) parts or all parts that will be needed to cut the box divider
-all_parts_b = 1; // [0:JustMajorParts, 1:AllParts]
 
 // Choose how many horizontal boxes you want to have
 boxes_horizontal_int = 2;
@@ -55,6 +57,13 @@ boxes_vertical_int = 4;
 boxes_width_int = 10;
 // Choose the fixed depth of a box (only works with fixed_number set to zero)
 boxes_depth_int = 10;
+
+
+/* [Output] */
+
+// Choose if you want just the two major (horizontal and vertical) parts or all parts that will be needed to cut the box divider
+all_parts_b = 0; // [0:JustMajorParts, 1:AllParts]
+
 
 // Choose distance between parts
 distance_int = 5;
