@@ -34,11 +34,11 @@
 
 /* [Drawer/Box Size and Divider] */
 
-// The width of your drawer
+// The width of your drawer/box
 drawer_width_int = 300;
-// The depth of your drawer
+// The depth of your drawer/box
 drawer_depth_int = 150;
-// The hight of the diveders
+// The hight of the dividers
 divider_hight_int = 50;
 
 // The thickness of the material you are cutting the dividers out
@@ -46,22 +46,22 @@ material_thickness_int = 4;
 
 /* [Separation Settings] */
 
-// Choose if you want to have fixed number of boxes with all the same size or a fixed value for a box that will be repeaded as often as possible
+// Choose if you want to have fixed number of boxes with all the same size or a fixed value for a box that will be repeated as often as possible
 fixed_number_b = 1; // [0:FixedSize, 1:FixedNumber]
 
 // Choose how many horizontal boxes you want to have
 boxes_horizontal_int = 2;
 // Choose how many vertical boxes you want to have
 boxes_vertical_int = 4;
-// Choose the fixed width of a box (only works with fixed_number set to zero)
+// Choose the fixed width of a box (only works with fixed_number set to FixedSize (0))
 boxes_width_int = 10;
-// Choose the fixed depth of a box (only works with fixed_number set to zero)
+// Choose the fixed depth of a box (only works with fixed_number set to FixedSize (0))
 boxes_depth_int = 10;
 
 
 /* [Output] */
 
-// Choose if you want just the two major (horizontal and vertical) parts or all parts that will be needed to cut the box divider
+// Choose if you want just the two major (horizontal and vertical) parts or all parts that will be needed to cut the box dividers
 all_parts_b = 0; // [0:JustMajorParts, 1:AllParts]
 
 
