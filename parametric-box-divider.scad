@@ -36,7 +36,7 @@ drawer_width_int = 90;
 // The depth of your drawer
 drawer_depth_int = 90;
 // The hight of the diveders
-divider_hight_int = 20;
+divider_hight_int = 30;
 
 // The thickness of the material you are cutting the dividers out
 material_thickness_int = 4;
